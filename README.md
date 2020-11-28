@@ -8,6 +8,8 @@ This project contains some automatic virtual machine creation scripts for Virtua
 * Debian 10 Server
 * Ubuntu 20.04 Desktop
 * Ubuntu 20.04 Server
+* Ubuntu 20.10 Desktop
+* Ubuntu 20.10 Server
 
 ## More info
 
