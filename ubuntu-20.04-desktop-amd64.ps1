@@ -2,6 +2,9 @@
 # Setting the PowerShell Execution Policy
 # https://www.mssqltips.com/sqlservertip/2702/setting-the-powershell-execution-policy/
 
+# You can download the ISO file in this link 
+# https://releases.ubuntu.com/20.04.1/ubuntu-20.04.1-desktop-amd64.iso
+
 # Set some variables
 $env:path = "C:\Program Files\Oracle\VirtualBox;$env:path"
 
@@ -10,6 +13,7 @@ $osType = "Ubuntu_64"
 $vmPath = "$home\VirtualBox VMs"
 $vmDiskName = "$vmName.vdi"
 $vmDiskPath = "$vmPath\$vmName\$vmDiskName"
+$graphicscontroller = "vboxsvga"
 $isoFile = "$home\ISO\ubuntu-20.04.1-desktop-amd64.iso"
 $username = "usuario"
 $password = "usuario"
@@ -94,7 +98,7 @@ VBoxManage modifyvm  $vmName `
 
 # Specifies the use of a graphics controller
 VBoxManage modifyvm  $vmName `
-    --graphicscontroller vboxsvga
+    --graphicscontroller $graphicscontroller
 
 # Set the boot order
 VBoxManage modifyvm `
